@@ -2,11 +2,11 @@
 def print_arg(argv):
     n = len(argv) - 1
     if n == 0:
-        print("{:d} arguments.".format(n))
+        print("{:d} argument.".format(n))
         return
     else:
         if n == 1:
-            print("{:d} arguments:".format(n))
+            print("{:d} argument:".format(n))
         else:
             print("{:d} arguments:".format(n))
     i = 1
