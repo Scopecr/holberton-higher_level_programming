@@ -7,6 +7,8 @@ def print_arg(argv):
     else:
         if n == 1:
             print("{:d} arguments:".format(n))
+        else:
+            print("{:d} arguments:".format(n))
     i = 1
     while i <= n:
         print("{:d}: {:s}".format(i, argv[i]))
