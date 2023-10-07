@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-def safe_print_integer(value):
+def safe_print_list(my_list=[], x=0):
+    i = 0
     try:
-        print("{:d}".format(value))
-        return True
+        while i < x:
+            print("{:d}".format(my_list[i]), end="")
+            i += 1
     except:
-        return False
+        pass
+    print()
+    return i
