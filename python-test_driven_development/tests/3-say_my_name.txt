@@ -9,8 +9,8 @@ Test two strings given:
      >>> say_my_name("First", "Middle Last")
      My name is First Middle Last
 
-     >>> say_my_name("Walter")
-     My name is Walter
+     >>> say_my_name("Walter, Carron")
+     My name is Walter Carrion
 
 FAIL CASES:
 
