@@ -1,1 +1,1 @@
-print type object
+print type
