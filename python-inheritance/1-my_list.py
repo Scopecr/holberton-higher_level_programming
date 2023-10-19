@@ -2,9 +2,5 @@
 class MyList(list):
     pass
 
-def __init__(self):
-
-    def print_sorted(self):
-        """Method that sorted a list"""
-
-        print(sorted(list(self)))
+def print_sorted(self):
+    print(sorted(list(self)))
