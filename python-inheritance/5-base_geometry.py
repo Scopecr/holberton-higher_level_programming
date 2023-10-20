@@ -4,6 +4,6 @@ Writing an empty class
 """
 class BaseGeometry:
     """
-        Using pass for empty class
+    Using pass for empty class
     """
     pass
