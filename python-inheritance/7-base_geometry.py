@@ -8,6 +8,7 @@ class BaseGeometry:
     """
     Defines BaseGeometry
     """
+
     def area(self):
         """
         Raises:
