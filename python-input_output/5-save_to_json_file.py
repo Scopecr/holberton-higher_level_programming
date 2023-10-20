@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Module that writes obj to a text"""
+"""Module for save_to_json_file method."""
+
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """Save an object into a JSON file."""
-    with open(filename, mode="w", encoding="utf-8") as f:
+    """"writes an object to text file, using JSON representation."""
+    with open(filename, "w", encoding='utf-8') as f:
         json.dump(my_obj, f)
