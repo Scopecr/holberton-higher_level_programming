@@ -6,4 +6,4 @@ def lookup(obj):
     """
     Function that returns the list of object
     """
-    return [i for i in dir(obj)]
+    return dir(obj)
