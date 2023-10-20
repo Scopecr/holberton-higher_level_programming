@@ -5,6 +5,13 @@ of the specified class; otherwise False
 """
 def is_same_class(obj, a_class):
     """
-    Return True if is instance return else return false_
+    Return True if is instance return else return false
+    
+    Args:
+        obj (_type_): _description_
+        a_class (_type_): _description_
+        
+        Returns:
+        _type_: _description_
     """
     return type(obj) is a_class
