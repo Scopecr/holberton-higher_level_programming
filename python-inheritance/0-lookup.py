@@ -4,7 +4,6 @@ Attribute lookup
 """
 def lookup(obj):
     """Lookup all attributes in Class
-
     Args:
         obj: object class
     Returns:
