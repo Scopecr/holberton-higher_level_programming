@@ -13,13 +13,6 @@ class Square(Rectangle):
         Args:
             size (int): size must be positive
         """
-        super().integer_validator("size", size)
+        self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
-
-    def area(self):
-        """
-
-        Returns:
-            size: description of the area of square
-        """
-        return self.__size * self.__size
