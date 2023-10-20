@@ -2,8 +2,6 @@
 """
 Attribute lookup
 """
-
-
 def lookup(obj):
     """Lookup all attributes in Class
 
