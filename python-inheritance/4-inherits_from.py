@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def inherits_from(obj, c_class):
+def inherits_from(obj, a_class):
     """Check if an object or class inherits from a given class."""
-    return isinstance(obj, type) and issubclass(obj, c_class)
+    return (type(obj)) is not a_class and issubclass(type(obj), a_class)
 
