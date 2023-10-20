@@ -7,7 +7,7 @@
 
 
 def is_kind_of_class(obj, a_class):
-        if isinstance(obj) and issubclass(obj):
-            return True
-        else:
-            return False
+    if isinstance(obj) and issubclass(obj):
+        return True
+    else:
+        return False
