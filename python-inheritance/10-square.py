@@ -1,17 +1,27 @@
 #!/usr/bin/python3
 """
-Square class that inherits from Rectangle
+Contains subclass Rectangle
+with instantiation of private attributes width and height, validated by parent,
+extends parent's area method and prints with __str__
+
+Contains subclass Square
+with instantiation of private attribute size, validated by superclass
 """
-Rectangle = __import__('9-rectangle.py').Rectangle
+
+
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Importing from Rectangle"""
-    def __init__(self, size):
-        """_summary_
+    """inherits from Rectangle, who inherits from BaseGeometry
+    methods:
+        __init__(self, size)
+    """
 
+    def __init__(self, size):
+        """initializes size
         Args:
-            size (int): size must be positive
+            size (int): private
         """
         self.integer_validator("size", size)
         super().__init__(size, size)
