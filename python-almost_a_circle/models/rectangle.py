@@ -1,122 +1,105 @@
 #!/usr/bin/python3
-"""
-Rectangle class that inherits from Base
-"""
-from.base import Base
+""" Rectangle class """
+from models.base import Base
 
 
 class Rectangle(Base):
-    """
-    Rectangle class that inherits from Base
-    """
+    """ Rectangle class inherits from Base class """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ init method for rectangle class
+        Args:
+            width (int): width of the rectangle
+            height (int): height of the rectangle
+            x (int): x position of the rectangle
+            y (int): y position of the rectangle
+            id (int): id of the rectangle
         """
-        Init Class
-        """
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
+
+    """artgument getters"""
 
     @property
     def width(self):
-        """
-        Width Getter
-        """
-        return self._width
+        """ width getter """
+        return self.__width
 
     @property
     def height(self):
-        """
-        Height Getter
-        """
+        """ height getter """
         return self.__height
 
     @property
     def x(self):
-        """
-        x Getter
-        """
+        """ x getter """
         return self.__x
 
     @property
     def y(self):
-        """
-        y Getter
-        """
+        """ y getter """
         return self.__y
+
+    """Argument setters """
 
     @width.setter
     def width(self, value):
+        """ width setter
+        Args:
+            value (int): value to set
         """
-        Width Setter
-        Attribute:
-            Value(int): value to assign
-        Raises:
-            TypeError: Value must be int
-            ValueError: Value myst be > 0
-        """
-        if type (value) is not int:
-            raise TypeError("Width must be an integer")
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
         if value <= 0:
-            raise ValueError("Width must be greater than zero")
-        self._width = value
+            raise ValueError("width must be > 0")
+        self.__width = value
 
     @height.setter
     def height(self, value):
-        """
-        height setter
-        Attribute:
-            Value(int): value to assign
-        Raises:
-            TypeError: is not integer
-            ValueError: must be > 0
+        """ height setter
+        Args:
+            value (int): value to set
         """
         if type(value) is not int:
-            raise TypeError("Height must be an integer")
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("Height must be greater than zero")
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @x.setter
     def x(self, value):
-        """
-        x Setter
-        Attributes:
-            value(int): value assign
-        Raises:
-            TypeError: is not integer
-            ValueError: must be > 0
+        """ x setter
+        Args:
+            value (int): value to set
         """
         if type(value) is not int:
-            raise TypeError("X coordinate must be an integer")
+            raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("X coordinate must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @y.setter
     def y(self, value):
-        """
-        Y Setter
-        Attributes:
-            Value(int):value assigned
-        Raises:
-            TypeError: if not integer
-            ValueError: must be > 0
+        """ y setter
+        Args:
+            value (int): value to set
         """
         if type(value) is not int:
-            raise TypeError("Y coordinate must be an integer")
+            raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("Y is must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
 
+    # Methods
     def area(self):
+        """Calculate the area of a rectangle
+        Returns:
+            The area of the Rectangle
         """
-        Calculation of area of rectangle
-        """
-        self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """display the Rectangle using '#' """
@@ -130,9 +113,7 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """
-        String Informal of the Rectangle
-        """
+        """return the string representation of the Rectangle """
         return (f"[Rectangle] ({self.id}) "
                 f"{self.x}/{self.y} - {self.width}/{self.height}")
 
@@ -145,9 +126,6 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """
-        returns the dictionary
-        representation of a rectangle
-        """
-        return {'id': self.id, 'width': self.width,
-                'height': self.height, 'x': self.x, 'y': self.y}
+        """return the dictionary representation of a Rectangle"""
+        return {'id': self.id, 'width': self.width, 'height': self.height,
+                'x': self.x, 'y': self.y}
