@@ -21,7 +21,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    """artgument getters"""
+    """argument getters"""
 
     @property
     def width(self):
@@ -93,7 +93,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    # Methods
     def area(self):
         """Calculate the area of a rectangle
         Returns:
@@ -117,13 +116,10 @@ class Rectangle(Base):
         return (f"[Rectangle] ({self.id}) "
                 f"{self.x}/{self.y} - {self.width}/{self.height}")
 
-    def update(self, *args, **kwargs):
+    def update(self, *args):
         """Update the rectangle"""
         if args:
             self.id, self.width, self.height, self.x, self.y = args
-        else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
 
     def to_dictionary(self):
         """return the dictionary representation of a Rectangle"""
