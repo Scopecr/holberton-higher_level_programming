@@ -116,7 +116,7 @@ class Rectangle(Base):
         return (f"[Rectangle] ({self.id}) "
                 f"{self.x}/{self.y} - {self.width}/{self.height}")
 
-    def update(self, *args,):
+    def update(self, *args):
         """Update the width and height of the Rectangle"""
         return self.__id, self.__width, self.__height, self.__x, self.__y
 
