@@ -118,7 +118,9 @@ class Rectangle(Base):
 
     def update(self, *args):
         """Update the width and height of the Rectangle"""
-        self.__id, self.__width, self.__height, self.__x, self.__y
+        for args in args:
+            pass
+        update = self.__id, self.__width, self.__height, self.__x, self.__y
 
     def to_dictionary(self):
         """return the dictionary representation of a Rectangle"""
