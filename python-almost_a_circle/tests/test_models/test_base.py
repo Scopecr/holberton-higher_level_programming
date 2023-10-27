@@ -1,84 +1,58 @@
-#!/usr/bin/python3
-"""
-Contains tests for Base class
-"""
-
 import unittest
-import json
-from models import base
-Base = base.Base
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBase(unittest.TestCase):
-    """check functionality of Base class"""
-    def _too_many_args(self):
-        """testing too many args to init"""
-        with self.assertRaises(TypeError):
-            b = Base(1, 1)
-
-    def _no_id(self):
-        """Testing id as None"""
-        b = Base()
-        self.assertEqual(b.id, 1)
-
-    def _id_set(self):
-        """Testing id as not None"""
-        b98 = Base(98)
-        self.assertEqual(b98.id, 98)
-
-    def _no_id_after_set(self):
-        """Testing id as None after not None"""
+    def test_base__init__(self):
+        """Test the id attribute of the Base class"""
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
         b2 = Base()
         self.assertEqual(b2.id, 2)
+        b3 = Base()
+        self.assertEqual(b3.id, 3)
+        b4 = Base(12)
+        self.assertEqual(b4.id, 12)
+        b5 = Base()
+        self.assertEqual(b5.id, 4)
 
-    def _nb_private(self):
-        """Testing nb_objects as a private instance attribute"""
-        b = Base(3)
-        with self.assertRaises(AttributeError):
-            print(b.nb_objects)
-        with self.assertRaises(AttributeError):
-            print(b.__nb_objects)
+    def test_create(self, **dictionary):
+        """Test the create method of the Base class"""
+        r1 = Rectangle(3, 5, 1)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
 
-    def _to_json_string(self):
-        """Testing regular to json string"""
-        Base._Base__nb_objects = 0
-        d1 = {"id": 9, "width": 5, "height": 6, "x": 7, "y": 8}
-        d2 = {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0}
-        json_s = Base.to_json_string([d1, d2])
-        self.assertTrue(type(json_s) is str)
-        d = json.loads(json_s)
-        self.assertEqual(d, [d1, d2])
+        self.assertIsInstance(r2, Rectangle)
+        # self.assertEqual(r1, r2)
 
-    def _empty_to_json_string(self):
-        """Test for passing empty list"""
-        json_s = Base.to_json_string([])
-        self.assertTrue(type(json_s) is str)
-        self.assertEqual(json_s, "[]")
+        self.assertIsNot(r1, r2)
 
-    def _None_to_json_String(self):
-        """testing None to a json"""
-        json_s = Base.to_json_string(None)
-        self.assertTrue(type(json_s) is str)
-        self.assertEqual(json_s, "[]")
+    def test_save_to_file(self):
+        """Test the save_to_file method of the Base class"""
+        # # save and load a list of retangles
+        # r1 = Rectangle(10, 7, 2, 8)
+        # r2 = Rectangle(2, 4)
+        # list_rectangles_input = [r1, r2]
 
-    def _from_json_string(self):
-        """Tests normal from_json_string"""
-        json_str = '[{"id": 9, "width": 5, "height": 6, "x": 7, "y": 8}, \
-{"id": 2, "width": 2, "height": 3, "x": 4, "y": 0}]'
-        json_l = Base.from_json_string(json_str)
-        self.assertTrue(type(json_l) is list)
-        self.assertEqual(len(json_l), 2)
-        self.assertTrue(type(json_l[0]) is dict)
-        self.assertTrue(type(json_l[1]) is dict)
-        self.assertEqual(json_l[0],
-                         {"id": 9, "width": 5, "height": 6, "x": 7, "y": 8})
-        self.assertEqual(json_l[1],
-                         {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0})
+        # Rectangle.save_to_file(list_rectangles_input)
+        # list_rectangles_output = Rectangle.load_from_file()
 
-    def _frjs_empty(self):
-        """Tests from_json_string  empty string"""
-        self.assertEqual([], Base.from_json_string(""))
+        # self.assertEqual(list_rectangles_input, list_rectangles_output)
 
-    def _frjs_None(self):
-        """Testing from_json_string   none string"""
-        self.assertEqual([], Base.from_json_string(None))
+        # # save and load a list of Square instances
+        # s1 = Square(5)
+        # s2 = Square(7, 9, 1)
+        # list_squares_input = [s1, s2]
+
+        # Square .save_to_file(list_squares_input)
+        # list_squares_output = Square.load_from_file()
+
+        # self.assertEqual(list_squares_input, list_squares_output)
+
+    # def test_load_from_file(cls):
+
+
+if __name__ == '__main__':
+    unittest.main()
