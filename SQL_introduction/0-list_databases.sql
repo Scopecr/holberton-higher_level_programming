@@ -1,2 +1,2 @@
 SHOW databases;
-SHOW databases;
+SHOW DATABASES;
