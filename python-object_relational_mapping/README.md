@@ -1,1 +1,1 @@
-Readme for the documentation of python object relational mapping
+Relational mapping mysql and python
