@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that lists all State objects from the database hbtn_0e_6_usa"""
+"""create a new State with the name “Louisiana”"""
 
 import sys
 from sqlalchemy import create_engine
@@ -13,21 +13,18 @@ if __name__ == "__main__":
     password = sys.argv[2]
     db_name = sys.argv[3]
 
-    # Creates an Engine, which is how SQLAlchemy communicates with the database
+    # Create engine that connects to the core (MySQL)
     engine = create_engine(
         f"mysql+mysqldb://{user_name}:{password}@localhost:3306/{db_name}"
     )
 
-    # Creates a configured class Session
-    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-
-    # Creates a Session instance
     session = Session()
 
-    # Querying for all State objects
-    for state in session.query(State).order_by(State.id):
-        print("{}: {}".format(state.id, state.name))
+    # Create new state
+    new_state = State(name="Louisiana")
+    session.add(new_state)
+    session.commit()
 
-    # Closes the session
-    session.close()
+    # Print new state id
+    print(new_state.id)
