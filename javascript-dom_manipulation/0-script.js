@@ -1,2 +1,4 @@
-const color = document.querySelector('header');
-color.style.color = '#FF0000';
+document.addEventListener('DOMContentLoaded', (event) => {
+  let header = document.querySelector('header');
+  header.style.color = "#FF0000";
+});
