@@ -1,9 +1,9 @@
-# Higher-level programing - Python, Databases & JavaScript
+# Higher-level programming - Python, Databases & JavaScript
 
 
-[](https://github.com/Scopecr/holbertonschool-higher_level_programming/blob/main/Image/giphy.gif)
+[!gif](https://github.com/Scopecr/holbertonschool-higher_level_programming/blob/main/Image/giphy.gif)
 
-This repository contains programs written for the higher-level programming rack at Holberton School. In these project exercises you can find the learning progress on Python, MySQL and JavaScript
+This repository contains programs written for the higher-level programming rack at Holberton School. In these project exercises, you can find the learning progress on Python, MySQL, and JavaScript
 
 - [python-test_driven_development](https://github.com/Scopecr/holbertonschool-higher_level_programming/tree/main/python-test_driven_development)
 - [python-object_relational_mapping](https://github.com/Scopecr/holbertonschool-higher_level_programming/tree/main/python-object_relational_mapping)
