@@ -1,7 +1,7 @@
 # Higher-level programing - Python, Databases & JavaScript
 
 
-[](C:\Users\walte\github\holbertonschool-higher_level_programming\Image\giphy.gif)
+[](https://github.com/Scopecr/holbertonschool-higher_level_programming/blob/main/Image/giphy.gif)
 
 This repository contains programs written for the higher-level programming rack at Holberton School. In these project exercises you can find the learning progress on Python, MySQL and JavaScript
 
