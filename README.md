@@ -24,6 +24,7 @@ This repository contains programs written for the higher-level programming rack 
 
 - [@Walter Carrion](https://github.com/Scopecr)
 <br>
+
 ## Acknowledgements
 
 All work contained on this project was completed as part of the curriculum for  Holberton School.
