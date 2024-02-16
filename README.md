@@ -18,5 +18,13 @@ This repository contains programs written for the higher-level programming rack 
 - [javascript-dom_manipulation](https://github.com/Scopecr/holbertonschool-higher_level_programming/tree/main/javascript-dom_manipulation)
 - [SQL_more_quaries](https://github.com/Scopecr/holbertonschool-higher_level_programming/tree/main/SQL_more_queries)
 - [SQL_introduction](https://github.com/Scopecr/holbertonschool-higher_level_programming/tree/main/SQL_introduction)
-
+<br>
   
+## Authors
+
+- [@Walter Carrion](https://github.com/Scopecr)
+<br>
+## Acknowledgements
+
+All work contained on this project was completed as part of the curriculum for  Holberton School.
+Holberton School is a compus-based full-stack software engineering program that prepares students for careers in the tech industry using project-based learning. For more information visit: [Holberton School](https://holbertonschoolpr.com/EN/foundation.html)
